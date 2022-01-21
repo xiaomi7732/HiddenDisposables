@@ -14,14 +14,14 @@ This is useful in case you have a Factory that returns an abstraction of an obje
 * class Paper : ISomething;
 * class Phone : ISomething, IDisposable;
 
-And factory:
+And a factory:
 
-* class ItemFactory that creates `ISomething` (in this implementation, it depends on whether the current second is a even or odd number).
+* [ItemFactory](./ItemFactory.cs) class that creates `ISomething` (in this implementation, it depends on whether the current second is a even or odd number).
 
-There are several solutions, refer to [Program.cs](./Program.cs) for details. But basically:
+There are several approaches, refer to [Program.cs](./Program.cs) for details. But basically:
 
-* Let the caller decide - that will become tedious;
-* Provide an extension method - I came this up, just a bit syntactic sugar;
+* Let the caller decide - not reliable, caller might miss it, and that will become tedious;
+* Provide an extension method - I came this up, just a bit syntactic sugar, it reduces duplications.
 * Use a wrapper class of [PotentialDisposable](./PotentialDisposable.cs) - this is the solution given in the original post, I refreshed it with newer syntax to make it cleaner;
 
 Have fun!
