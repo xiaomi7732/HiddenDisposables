@@ -21,7 +21,7 @@ And factory:
 There are several solutions, refer to [Program.cs](./Program.cs) for details. But basically:
 
 * Let the caller decide - that will become tedious;
-* Provide an extension method - I came this up;
-* Use a wrapper class of [PotentialDisposable](./PotentialDisposable.cs);
+* Provide an extension method - I came this up, just a bit syntactic sugar;
+* Use a wrapper class of [PotentialDisposable](./PotentialDisposable.cs) - this is the solution given in the original post, I refreshed it with newer syntax to make it cleaner;
 
 Have fun!
