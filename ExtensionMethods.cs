@@ -10,5 +10,15 @@ namespace LearnPotentialDisposable
                 disposable.Dispose();
             }
         }
+
+        public static PotentialDisposable<T> MakeDisposable(this T target)
+            where T: class
+        {
+            if(T is null)
+            {
+                throw new ArgumentNullException(nameof(target));
+            }
+            return new PotentialDisposable<T>(target);
+        }
     }
 }
