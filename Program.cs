@@ -23,3 +23,10 @@ using (new PotentialDisposable<ISomething>(createdItem3))
 {
     Console.WriteLine("#3 Create {0}, is IDisposable: {1}", createdItem3, createdItem3 is IDisposable);
 }
+
+// This usage doesn't seem make too much sense. It almost is the same as if new PotentialDisposable(factory.CreateSomething())
+// Method 3.2: Use potential disposable + extension method
+using(var createdItem4 = factory.CreateSomething().MakeDisposable())
+{
+    
+}

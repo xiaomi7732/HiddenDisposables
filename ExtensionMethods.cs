@@ -11,14 +11,7 @@ namespace LearnPotentialDisposable
             }
         }
 
-        public static PotentialDisposable<T> MakeDisposable(this T target)
-            where T: class
-        {
-            if(T is null)
-            {
-                throw new ArgumentNullException(nameof(target));
-            }
-            return new PotentialDisposable<T>(target);
-        }
+        public static PotentialDisposable<T> MakeDisposable<T>(this T target)
+            where T : class => new PotentialDisposable<T>(target);
     }
 }
