@@ -22,6 +22,6 @@ There are several approaches, refer to [Program.cs](./Program.cs) for details. B
 
 * Let the caller decide - not reliable, caller might miss it, and that will become tedious;
 * Provide an extension method - I came this up, just a bit syntactic sugar, it reduces duplications.
-* Use a wrapper class of [PotentialDisposable](./PotentialDisposable.cs) - this is the solution given in the original post, I refreshed it with newer syntax to make it cleaner;
+* Use a wrapper struct of [PotentialDisposable](./PotentialDisposable.cs) - this is the solution given in the original post, I refreshed it with newer syntax to make it cleaner;
 
 Have fun!
