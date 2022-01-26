@@ -1,6 +1,6 @@
 namespace LearnPotentialDisposable;
 
-internal sealed class PotentialDisposable<T> : IDisposable where T : class
+internal struct PotentialDisposable<T> : IDisposable where T : class
 {
     public T Instance { get; }
     public PotentialDisposable(T instance)
